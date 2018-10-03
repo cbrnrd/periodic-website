@@ -1,10 +1,20 @@
 @import './bourbon/bourbon'
 @import './neat/neat'
 
+
+// Font stuff
+@include font-face(Potra, /fonts/Potra)
+@import url(https://fonts.googleapis.com/css?family=Roboto:300)
+
 $grid-columns: 12
 
 $tablet: new-breakpoint(max-width 768px 8)
 $mobile: new-breakpoint(max-width 480px 4)
+
+.title
+  font-family: "Potra"
+  font-weight: 400
+  color: white
 
 =prevent-selection
   -webkit-touch-callout: none
@@ -15,16 +25,17 @@ $mobile: new-breakpoint(max-width 480px 4)
   user-select: none
 
 html body
-  background: #fcfcfc
-  font-family: "Helvetica Neue", Helvetica, sans-serif
-  color: #777
+  background: #333333
+  font-family: "Roboto", sans-serif
+  background-color: #333333
+  color: white
   margin-bottom: 2em
   font-size: 125%
   margin: 0
   padding: 0
 
   a
-    color: #333 !important
+    color: white !important
     text-decoration: none
 
   h1, p
@@ -38,8 +49,10 @@ html body
     +row
 
 header
-  box-shadow: #d2d2d2 0px -1px 10px inset
-  background: #e6e6e6
+  //box-shadow: #d2d2d2 0px -1px 10px inset
+  background: #333333
+  color: white
+  font-weight: 300
   padding: 5em 0 3em 0
   text-align: center
 
@@ -51,19 +64,21 @@ header
     h1
       color: #000
       font-size: 5em
+      font-weight: 400
       margin-bottom: 0.25em
       margin-top: 0
 
     h2
       font-size: 1.25em
-      color: #777
+      font-weight: 300
+      color: white
 
   img
     +prevent-selection
     padding: 1em 1.5em
 
   code
-    color: #333
+    color: white
     font-family: "Meslo", Menlo, Courier, monospace
     display: block
     clear: both
@@ -80,7 +95,7 @@ section
     position: absolute
     width: 240px
     margin-left: -240px
-    margin-top: -120px
+    //margin-top: -120px
 
 
   .details

@@ -5,40 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width"/>
     <title>{{ site.title }} - {{ site.tagline }}</title>
-    <meta name="author" content="Mattt"/>
+    <meta name="author" content="cbrnrd"/>
     <meta name="description" content="{{ site.description }}">
 
     <meta property="og:title" content="{{ site.title }}">
     <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:image" content="{{ site.url }}/images/houston.svg">
     <meta property="og:site_name" content="{{ site.name }}">
 
-    <link rel="canonical" href="{{ site.url }}"/>
     <link rel="license" href="http://opensource.org/licenses/MIT"/>
     <link rel="stylesheet" type="text/css" href="/css/screen.css"/>
 
-    <script src="//use.typekit.com/qmh6rwc.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
     <div role="container">
       <header role="banner">
 
         <hgroup>
-          <h1>{{ site.title }}</h1>
+          <h1 class="title">{{ site.title }}</h1>
           <h2>{{ site.tagline }}</h2>
         </hgroup>
 
         <nav role="navigation">
         {% for project in site.data.projects %}
           <a href="#{{ project.name | downcase }}" title="{{ project.name }}">
-            <img src="/images/{{ project.name | downcase }}.svg" alt="{{ project.name }}" />
+            <img src="/images/{{ project.name | downcase }}-logo.png" alt="{{ project.name }}" />
           </a>
         {% endfor %}
         </nav>
 
-        <code>$ gem install nomad-cli</code>
+        <code>$ gem install periodic-cli</code>
       </header>
 
       <div role="main">
@@ -46,22 +41,11 @@
       </div>
 
       <footer role="contentinfo">
-        <p>© {{ site.time | date: "%Y" }} <a href="https://github.com/mattt" rel="nofollow">Mattt</a></p>
-
-        <p>Illustrations by <a href="http://gustavholtz.com">Gustav Holtz</a></p>
+        <p>© {{ site.time | date: "%Y" }} <a href="https://github.com/cbrnrd" rel="nofollow">cbrnrd</a></p>
 
         <p>Released under the <a href="http://opensource.org/licenses/MIT" rel="license">MIT License</a></p>
       </footer>
     </div>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-2079355-26', 'nomad-cli.com');
-      ga('send', 'pageview');
-    </script>
   </body>
 </html>

@@ -5,28 +5,21 @@ layout: default
 <div role="container">
   {% for project in site.data.projects %}
     <section id="{{ project.name | downcase }}" itemscope itemtype="http://schema.org/SoftwareApplication">
-      <a href="https://github.com/nomad/{{ project.name }}" title="{{ project.name }}">
-        <img alt="{{ project.name }}" src="/images/{{ project.name | downcase }}.svg" itemprop="image"/>
+      <a href="https://github.com/cbrnrd/{{ project.name }}" title="{{ project.name }}">
+        <img alt="{{ project.name }}" src="/images/{{ project.name | downcase }}-logo.png" itemprop="image"/>
       </a>
 
       <div class="details">
         <h1 itemprop="name">
-          <a href="https://github.com/nomad/{{ project.name }}" itemprop="url">{{ project.name }}</a>
+          <a href="https://github.com/cbrnrd/{{ project.name }}" itemprop="url">{{ project.name }}</a>
         </h1>
 
         <div itemprop="description">
           {{ project.description | markdownify }}
         </div>
 
-        <pre><code>{{ project.code | escape }}</code></pre>
+        <code>{{ project.code | escape }}</code>
 
-        <div class="metadata" hidden style="display:none">
-          <span itemprop="applicationCategory">Utility</span>
-          <span itemprop="applicationSubCategory">Command Line Utility</span>
-          <span itemprop="applicationSuite">Nomad</span>
-          <span itemprop="fileFormat">text/x-ruby</span>
-          <span itemprop="operatingSystem">Mac OS X 10.7+</span>
-          <span itemprop="requirements">Ruby 2.0+</span>
         </div>
       </div>
     </section>

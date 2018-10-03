@@ -1,9 +1,8 @@
-url: https://nomad-cli.com
-title: Nomad
-tagline: World-Class Command Line Utilities For iOS Development
-description: "Nomad is a collection of world-class command line utilities for iOS development."
+url: https://periodic.now.sh
+title: Periodic
+tagline: Command Line Utilities for the common man
+description: Command Line Utilities for the common man
 permalink: /:title/
-timezone: America/Los_Angeles
 
 markdown: redcarpet
 exclude: ["sass"]
