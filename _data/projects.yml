@@ -5,5 +5,5 @@
   code: $ krypton encrypt "mymessage" "mykey"
 -
   name: radon
-  description: (WIP) Generate starter code for all different coding environments.
+  description: Generate starter code for all different coding environments.
   code: $ radon gradle ProjectName
